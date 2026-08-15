@@ -2,33 +2,39 @@
 import java.awt.FlowLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
-public class RadioButton {
+public class RadioCheckBox{
     public static void main(String[] args) {
-        Radio rb = new Radio();
+        RadioCheck rb = new RadioCheck();
     }
 }
-class Radio extends JFrame{
+class RadioCheck extends JFrame{
     JTextField txt;
     JRadioButton r1,r2;
     JButton btn;
     JLabel lbl;
-    public Radio(){
+    JCheckBox cb1,cb2;
+    public RadioCheck(){
         txt = new JTextField(20);
         btn = new JButton("OK");
         r1 = new JRadioButton("Male");
         r2 = new JRadioButton("Female");
         lbl = new JLabel("Greeting");
+        cb1 = new JCheckBox("Dancing");
+        cb2 = new JCheckBox("Singing");
         
         
         
         add(txt);      
         add(r1);
         add(r2);
+        add(cb1);
+        add(cb2);
         add(btn);
         add(lbl);
         
@@ -41,11 +47,19 @@ class Radio extends JFrame{
         {
             String name = txt.getText();
             if(r1.isSelected()){
-                lbl.setText("Mr. " + name);
+               name = "Mr. " + name;
             }
             else{
-                lbl.setText("Ms. " + name);
+                name = "Ms. " + name;
             }
+            if(cb1.isSelected()){
+                name = name + " Dancer";
+            }
+            if(cb2.isSelected()){
+                name = name + " Singer";
+            }
+            lbl.setText(name);
+            
         }
         );
         
