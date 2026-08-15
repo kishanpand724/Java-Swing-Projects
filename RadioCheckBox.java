@@ -1,12 +1,6 @@
 
 import java.awt.FlowLayout;
-import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JRadioButton;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 public class RadioCheckBox{
     public static void main(String[] args) {
