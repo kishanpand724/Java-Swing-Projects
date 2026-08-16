@@ -1,6 +1,14 @@
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.FlowLayout;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 
 public class RadioCheckBox{
     public static void main(String[] args) {
@@ -37,7 +45,16 @@ class RadioCheck extends JFrame{
         bg.add(r1);
         bg.add(r2);
         
-        btn.addActionListener(ae ->
+        cb1.addItemListener(new ItemListener() {      // checkbox event
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                System.out.println("Hii");
+            }
+        }
+        );
+        
+        
+        btn.addActionListener(ae ->      // radiobutton and button ke liye hai
         {
             String name = txt.getText();
             if(r1.isSelected()){
@@ -56,7 +73,7 @@ class RadioCheck extends JFrame{
             
         }
         );
-        
+       
         
         setLayout(new FlowLayout());
         setSize(400,400);
