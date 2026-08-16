@@ -39,7 +39,7 @@ public class Caller extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         new RadioCheck();
-        dispose();
+        dispose();    // system.exit -> to close all jframes 
     }                                        
 
     public static void main(String args[]) {
