@@ -1,11 +1,7 @@
 
 import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JProgressBar;
-import javax.swing.Timer;
+import java.awt.event.*;
+import javax.swing.*;
 
 public class Call {
     public static void main(String[] args) {
